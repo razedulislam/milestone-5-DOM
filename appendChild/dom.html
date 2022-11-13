@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <h2>document - 1</h2>
+        <p id="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+    </div>
+    <div class="section">
+        <h2 id="second-title">document - 2</h2>
+        <p class="second-p">rtytyut Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+    </div>
+    <div class="section">
+        <h2>document - 3</h2>
+        <p>hthyth Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+    </div>
+    <script>
+        // console.log(document);
+        const getElements = document.getElementsByTagName('h2');
+        for(const h2 of getElements){
+            // console.log(h2);
+            console.log(h2.innerHTML);
+            // console.log(h2.innerText);
+        }
+        const blogDetails = document.getElementsByTagName('p');
+
+        for(const p of blogDetails){
+            // console.log(p.innerHTML);
+        }
+        
+        const secondTite = document.getElementById('second-title');
+        secondTite.style.color = 'green' ;
+        secondTite.style.textAlign = 'center';
+        secondTite.style.backgroundColor = 'red';
+        secondTite.innerHTML = 'this blog is awesome';
+
+        const blogs = document.getElementsByClassName('section');
+        for(const blog of blogs){
+            blog.style.color = 'yellow';
+            blog.style.backgroundColor = 'black';
+        }
+
+        const specialBlog = document.getElementById('special');
+        specialBlog.innerHTML = `
+        <h3>This is awesome blog </h3>
+        <p>hthyth Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+        `;
+        
+    </script>
+</body>
+</html>

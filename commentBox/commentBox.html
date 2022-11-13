@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>comment box</h4>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, sint. Recusandae tempore id perspiciatis eveniet labore dolorum necessitatibus praesentium excepturi nam ipsa laboriosam, doloribus modi sequi ratione sed aliquid illum!</p>
+        <p>Iure deleniti vel officia molestiae quaerat optio temporibus placeat repudiandae totam laborum veniam, fuga iusto, repellat, aut hic amet excepturi suscipit magnam unde! Illum dolores provident perferendis ipsum, nam quisquam.</p>
+    </div>
+
+
+   <textarea name="" id="new-comment" cols="60" rows="6"></textarea>
+   <br>
+    <button id="post-comment">Add Comment</button>
+    <script>
+
+        //note textarea and input er khetre amora value use kori .. paragraph ba onno khetre innertext use kori
+
+        // step : 1 = add btn event handler
+        document.getElementById('post-comment').addEventListener('click' , function(){
+            //step 2 : get user comment and catch text area id
+           const CommentBox = document.getElementById('new-comment'); 
+        //    console.log(newComment.value);
+        // const commentValue = newComment.value ;
+
+        //step 3 : create comment paragraph
+        const p = document.createElement('p');
+        // p.innerText = commentValue ;
+        p.innerText = CommentBox.value ;
+
+        // step 4 : append child 
+        const commentAppend = document.getElementById('comment-container');
+        commentAppend.appendChild(p);
+
+        //step 5 : clear comment box
+        CommentBox.value = '';
+        })
+    </script>
+    <script src="commentBox.js"></script>
+</body>
+</html>

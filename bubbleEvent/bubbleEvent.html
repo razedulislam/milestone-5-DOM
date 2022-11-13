@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- example image : https://images.search.yahoo.com/search/images;_ylt=Awr491UICGZjg8AGe3dXNyoA;_ylu=Y29sbwNncTEEcG9zAzEEdnRpZANMT0NVSTA1M18xBHNlYwNwaXZz?p=bubble+event+javascript&fr2=piv-web&type=E210US91213G91580&fr=mcafee#id=2&iurl=https%3A%2F%2Fixdzone.com%2Fwp-content%2Fuploads%2F2017%2F05%2FEvent_Bubbling-1.jpg&action=click -->
+<!-- note : bubble event = jodi onek gula child parent er modde event handler add kori abong jodi kono click event hoi tahole browser first parent element theke child element a ase jotokhon child element thake totokhon ase... tarpor eta first child theke event fire start kore, then parent er event fire kore, jodi onek gula parents thake thaile nicher theke uporer dike ekta ekta kore event fire kore..but check korar somoi parent theke child a kore -->
+<body>
+    <h2>Bubble event</h2>
+   <div id="container">
+    <ul id="list-container">
+        <li class="item">item-1</li>
+        <li id="item2" class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+    </ul>
+   </div>
+    <script>
+        // second item clicked 
+        document.getElementById('item2').addEventListener('click' ,function(event){
+           const item2 = document.getElementById('item2');
+           console.log('second item clicked');
+        //    event.stopPropagation();
+        // event.stopImmediatePropagation()
+        
+        //    bubble event k stop korar jonno stopPropagation use kora hoi.. eta use korle click hobe only nijer element er opor
+
+        })
+        // list container clicked 
+        document.getElementById('list-container').addEventListener('click' ,function(){
+           const listContainer = document.getElementById('list-container');
+           console.log('list container clicked');
+        })
+        // container clicked 
+        document.getElementById('container').addEventListener('click' ,function(){
+           const listContainer = document.getElementById('container');
+           console.log('container clicked');
+        })
+    </script>
+</body>
+</html>

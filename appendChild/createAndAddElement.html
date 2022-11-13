@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Welcome to my first blogs</h2>
+
+    <section id="blogging">
+        <div class="blog-section">
+            <h2>document - 1</h2>
+            <p id="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+        </div>
+        <div class=blog-section">
+            <h2 id="second-title">document - 2</h2>
+            <p class="second-p">rtytyut Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+        </div>
+        <div class="blog-section">
+            <h2>document - 3</h2>
+            <p>hthyth Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.</p>
+        </div>
+    </section>
+
+    <section id="blogs">
+        <ul id="blogs_list">
+            <li >item 2</li>
+            <li>item 3</li>
+            <li>item 1</li>
+            <li>item 4</li>
+            <li>item 5</li>
+        </ul>
+    </section>
+   
+
+    <!-- create and add js elements  -->
+    <script>
+        // create the elements 
+        const li = document.createElement('li');
+        // li.innerHTML = "item 6";
+        li.innerText = "item 6";
+        // where to add elements 
+        const ul = document.getElementById('blogs_list');
+        // append new elements 
+        ul.appendChild(li);
+
+        
+        
+
+        // blogging section 
+        // create elemenets 
+        const article1 = document.createElement('article');
+        const h2 = document.createElement('h2');
+        const para = document.createElement('p');
+
+        // add text in innertxt 
+        h2.innerText = 'document -4' ;
+        para.innerText = 'hthyth Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! ';
+
+        // append child 
+        article1.appendChild(h2);
+        article1.appendChild(para);
+
+        // catch dom id and append  article in parent
+        const blogAdd = document.getElementById('blogging') ;
+        blogAdd.appendChild(article1);
+
+
+
+        const blogItems = document.getElementById('blogs');
+        blogItems.style.color = 'red' ;
+
+
+        // create elements 
+        const article = document.createElement('article');
+        // style class added. here blog is a style class 
+        article.classList.add('blogs_list');
+        const h3 = document.createElement('h3');
+        const p = document.createElement('p');
+
+        // add text i innertsxt or innerHTML 
+        h3.innerText = 'This is heading 3';
+        p.innerText = 'rtytyut Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio quibusdam minima illo veritatis delectus deleniti, sit esse! Culpa, sapiente.';
+
+        // appendChild 
+        article.appendChild(h3);
+        article.appendChild(p);
+
+        // catch id and render html element here 
+        const blogSection = document.getElementById('blogs');
+        blogSection.appendChild(article);
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

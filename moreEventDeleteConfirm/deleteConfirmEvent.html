@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="header">This is awesome text for delete</h3>
+    <input id="inputbtn" type="text" placeholder="enter delete to confirm" >
+    <button id="deletebtn" disabled>delete</button>
+
+    <script>
+        // click event 
+        document.getElementById('deletebtn').addEventListener('click' , function(){
+            document.getElementById('header').style.display = 'none' ;
+        })
+
+        // focus event for background goldenRod
+        document.getElementById('inputbtn').addEventListener('focus' , function(){
+            document.body.style.backgroundColor = 'goldenRod';
+        })
+        //  blur for background white
+        document.getElementById('inputbtn').addEventListener('blur' , function(){
+            document.body.style.backgroundColor = 'white';
+        })
+        // focus keyup 
+        document.getElementById('inputbtn').addEventListener('keyup' , function(event){
+            if(event.target.value=='delete'){
+                document.getElementById('deletebtn').removeAttribute('disabled');
+                //disabled attribute k remove kore dilam removeAttribute use kore
+            }
+            else{
+                document.getElementById('deletebtn').setAttribute('disabled' , true);
+            }
+        })
+        // focus change 
+        // document.getElementById('inputbtn').addEventListener('change' , function(){
+        //     const inputField = document.getElementById('inputbtn');
+        //     console.log(inputField.value);
+        // })
+
+    </script>
+</body>
+</html>

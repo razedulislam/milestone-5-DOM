@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dlegation event</h2>
+    <ul id="list-item">
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+        <li class="item">item-6</li>
+    </ul>
+    <button id="addItem">Add Item</button>
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items){
+        //     item.addEventListener('click' , function(e){
+        //         //remove item by id
+        //         // document.getElementById('list-item').removeChild(item);
+
+        //         // another way to remove item
+        //         //find parent node
+        //         const parent = e.target.parentNode;
+        //         //remove targetd element
+        //         // parent.removeChild(item);
+        //         parent.removeChild(e.target);
+
+        //     })
+        // }
+
+            document.getElementById('addItem').addEventListener('click' , function(){
+                const li = document.createElement('li');
+                li.innerText = 'Item added';
+                const parent = document.getElementById('list-item');
+                parent.appendChild(li);
+            })
+            document.getElementById('list-item').addEventListener('click' , function(e){
+                const parents = e.target.parentNode;
+                parents.removeChild(event.target);
+            })
+        
+    </script>
+</body>
+</html>

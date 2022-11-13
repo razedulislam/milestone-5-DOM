@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!-- notes = event onk vabe kora jai, 
+    1. direct html tag er sathe event add kore
+    2. hml file a script er majhe function likhe and function k tag er majhe onclick er majhe rekhe
+    3. external js file a function likhe seta onclick ba jekono event er sathe html tag er majhe call kore
+    4. amora chaile html er button a id diye seta dom diye dhore event korate pari
+ -->
+
+</head>
+<body>
+   <!-- html tag er majhe event use kora hoyeche -->
+    <button onclick="document.body.style.backgroundColor = 'green';">Click me : Green</button>
+    <!-- same file script use kore  -->
+    <button onclick="getYellow()">Click on this text!</button>
+    <!-- external file script use kore  / mainly used-->
+    <button onclick="getRed()">Make me Red</button>
+     <!-- using id  -->
+    <button id="blueButon">Click me : blue</button>
+    <!-- another way in script tag -->
+    <button id="orangeBtn">Click me : orange</button>
+    <!-- handle by using add event listener/ mostly used  -->
+    <button id="goldenRodBtn">Make me : GoldenRod </button>
+    <button id="darkBlue">Make me : dark Blue </button>
+    <button id="cyanbtn">Make me : Cyan </button>
+    <script>
+       function getYellow(){
+        document.body.style.backgroundColor = 'yellow';
+        }
+        
+
+    </script>
+     <h1 id="header">Event</h1>
+     <script src="event.js"></script>
+</body>
+</html>
